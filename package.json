@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint:style": "prettier --check src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
