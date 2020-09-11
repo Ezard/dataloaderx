@@ -27,3 +27,7 @@ jobs:
         run: npm ci
       - name: Lint styling
         run: npm run lint:style
+      - name: Run Tests
+        run: npm run test
+      - name: Upload Coverage to CodeCov
+        run: npx codecov
