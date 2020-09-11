@@ -4,13 +4,44 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "build:watch": "tsc --watch",
     "lint:style": "prettier --check src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "dataloader": "^2.0.0"
+  },
   "devDependencies": {
-    "prettier": "^2.1.1"
+    "@types/jest": "^26.0.13",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.1",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "**/*.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "index.ts",
+      ".spec.ts"
+    ]
   }
 }
