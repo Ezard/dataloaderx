@@ -12,9 +12,12 @@ export interface DataLoaderOptions<T> {
 
 export abstract class BaseDataLoader<Entity, ID, Result, HookResult = unknown> {
   private static ID_COUNT = 0;
-  private readonly id = BaseDataLoader.ID_COUNT++;
+  private readonly id: number;
 
-  protected constructor(private readonly options: DataLoaderOptions<HookResult> = {}) {}
+  protected constructor(private readonly options: DataLoaderOptions<HookResult> = {}) {
+    this.id = BaseDataLoader.ID_COUNT;
+    BaseDataLoader.ID_COUNT++;
+  }
 
   protected abstract loadByIds: (ids: ID[]) => Promise<Result>;
 
