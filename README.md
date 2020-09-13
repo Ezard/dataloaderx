@@ -1,6 +1,9 @@
 # DataLoaderX
 
-[![codecov](https://codecov.io/gh/Ezard/dataloaderx/branch/feature%2Fdataloader/graph/badge.svg)](https://codecov.io/gh/Ezard/dataloaderx)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ezard/dataloaderx/publish?logo=github)
+![Codecov](https://img.shields.io/codecov/c/github/ezard/dataloaderx?logo=codecov)
+![David](https://img.shields.io/david/ezard/dataloaderx?logo=npm)
+![David](https://img.shields.io/david/dev/ezard/dataloaderx?logo=npm)
 
 DataLoaderX is an expansion upon [DataLoader](https://github.com/graphql/dataloader), designed to abstract some details away, and add common functionality.
 
@@ -26,10 +29,10 @@ await idLoader.getDataLoader(context).load(1); // returns the user with an ID of
 ## ArrayDataLoader
 
 ```typescript
-const authorIdLoader = new ObjectDataLoader(
+const authorIdLoader = new ArrayDataLoader(
   async (ids: number[]) => getBooksByAuthorIds(ids),
   result => result.authorId
 );
 
-await authorIdLoader.getDataLoader(context).load(2); // returns all books with an authorId of 2
+await authorIdLoader.getDataLoader(context).load(2); // returns an array of all books with an authorId of 2
 ```
