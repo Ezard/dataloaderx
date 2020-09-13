@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Ezard/dataloaderx/compare/v1.0.0...v1.0.1) (2020-09-13)
+
+
+### Bug Fixes
+
+* **docs:** Fix readme issues and add badges ([#17](https://github.com/Ezard/dataloaderx/issues/17)) ([7a317d1](https://github.com/Ezard/dataloaderx/commit/7a317d1c8fee8f62e21b754d54137fdf220c3d90))
+
 # 1.0.0 (2020-09-13)
 
 
