@@ -2,7 +2,7 @@
   "name": "dataloaderx",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
     "build:watch": "tsc --watch",
