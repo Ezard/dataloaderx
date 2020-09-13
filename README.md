@@ -34,5 +34,5 @@ const authorIdLoader = new ArrayDataLoader(
   result => result.authorId
 );
 
-await authorIdLoader.getDataLoader(context).load(2); // returns all books with an authorId of 2
+await authorIdLoader.getDataLoader(context).load(2); // returns an array of all books with an authorId of 2
 ```
