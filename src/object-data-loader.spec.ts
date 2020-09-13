@@ -40,4 +40,17 @@ describe('ObjectDataLoader', () => {
 
     expect(entity?.id === null);
   });
+
+  it('should handle entities being returned in a different order to that in which the IDs were supplied', async () => {
+    const objectDataLoader = new ObjectDataLoader(
+      async () => [{ id: 3 }, { id: 2 }, { id: 1 }],
+      result => result.id,
+    );
+    const dataLoader = objectDataLoader.getDataLoader({});
+    const [a, b, c] = await Promise.all([dataLoader.load(1), dataLoader.load(2), dataLoader.load(3)]);
+
+    expect(a?.id).toEqual(1);
+    expect(b?.id).toEqual(2);
+    expect(c?.id).toEqual(3);
+  });
 });
