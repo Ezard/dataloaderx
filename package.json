@@ -18,7 +18,7 @@
     "email": "ben@ezard.io",
     "url": "ezard.io"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "dataloader": "^2.0.0"
   },
