@@ -43,7 +43,9 @@ describe('BaseDataLoader', () => {
       result => result.id,
       {
         hooks: {
-          beforeLoad: () => {},
+          beforeLoad: () => {
+            // unused
+          },
           afterLoad,
         },
       },
