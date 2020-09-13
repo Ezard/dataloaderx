@@ -12,6 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
+          fetch-depth: 0
           persist-credentials: false
       - name: Setup Node.js for use with actions
         uses: actions/setup-node@v1
