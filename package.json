@@ -16,7 +16,14 @@
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "dataloader",
+    "graphql",
+    "cache",
+    "caching",
+    "batch",
+    "batching"
+  ],
   "author": {
     "name": "Ben Ezard",
     "email": "ezard.ben@gmail.com",
