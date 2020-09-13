@@ -4,7 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc --project tsconfig.build.json",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --project tsconfig.build-cjs.json",
+    "build:esm": "tsc --project tsconfig.build-esm.json",
     "build:watch": "tsc --watch",
     "lint:code": "eslint src",
     "lint:style": "prettier --check src",
