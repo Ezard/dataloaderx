@@ -6,15 +6,18 @@ export interface DataLoaderHookOptions<T> {
   afterLoad?: (value: T) => void | Promise<void>;
 }
 
-export interface DataLoaderOptions {
-  hooks?: DataLoaderHookOptions<unknown>;
+export interface DataLoaderOptions<T> {
+  hooks?: DataLoaderHookOptions<T>;
 }
 
-export abstract class BaseDataLoader<Entity, ID, Result> {
+export abstract class BaseDataLoader<Entity, ID, Result, HookResult = unknown> {
   private static ID_COUNT = 0;
-  private readonly id = BaseDataLoader.ID_COUNT++;
+  private readonly id: number;
 
-  protected constructor(private readonly options: DataLoaderOptions = {}) {}
+  protected constructor(private readonly options: DataLoaderOptions<HookResult> = {}) {
+    this.id = BaseDataLoader.ID_COUNT;
+    BaseDataLoader.ID_COUNT++;
+  }
 
   protected abstract loadByIds: (ids: ID[]) => Promise<Result>;
 
@@ -22,9 +25,14 @@ export abstract class BaseDataLoader<Entity, ID, Result> {
 
   private createDataLoader(): DataLoader<ID, Entity> {
     return new DataLoader<ID, Entity>(async (ids: ReadonlyArray<ID>) => {
-      const beforeHookResult = await this.options.hooks?.beforeLoad?.();
-      const results = await this.load(ids);
-      await this.options.hooks?.afterLoad?.(beforeHookResult);
+      let results: (Entity | Error)[];
+      if (this.options.hooks) {
+        const beforeHookResult = await this.options.hooks.beforeLoad();
+        results = await this.load(ids);
+        await this.options.hooks.afterLoad?.(beforeHookResult);
+      } else {
+        results = await this.load(ids);
+      }
       return results;
     });
   }
