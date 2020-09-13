@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
     "build:watch": "tsc --watch",
-    "lint:code": "eslint",
+    "lint:code": "eslint src",
     "lint:style": "prettier --check src",
     "test": "jest",
     "test:coverage": "jest --coverage",
