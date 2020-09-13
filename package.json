@@ -1,24 +1,44 @@
 {
   "name": "dataloaderx",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "description": "DataLoaderX is an expansion upon DataLoader, designed to abstract some details away, and add common functionality",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
-    "build": "tsc --project tsconfig.build.json",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --project tsconfig.build-cjs.json",
+    "build:esm": "tsc --project tsconfig.build-esm.json",
     "build:watch": "tsc --watch",
     "lint:code": "eslint src",
     "lint:style": "prettier --check src",
+    "release": "semantic-release",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "dataloader",
+    "graphql",
+    "cache",
+    "caching",
+    "batch",
+    "batching"
+  ],
+  "author": {
+    "name": "Ben Ezard",
+    "email": "ezard.ben@gmail.com",
+    "url": "ezard.io"
+  },
+  "license": "MIT",
   "dependencies": {
     "dataloader": "^2.0.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/commit-analyzer": "8.0.1",
+    "@semantic-release/git": "9.0.0",
+    "@semantic-release/github": "7.1.1",
+    "@semantic-release/npm": "7.0.6",
     "@types/jest": "26.0.13",
     "@typescript-eslint/eslint-plugin": "4.1.0",
     "@typescript-eslint/parser": "4.1.0",
@@ -27,6 +47,7 @@
     "eslint-plugin-import": "2.22.0",
     "jest": "26.4.2",
     "prettier": "2.1.1",
+    "semantic-release": "17.1.1",
     "ts-jest": "26.3.0",
     "typescript": "4.0.2"
   },

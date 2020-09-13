@@ -1,20 +1,23 @@
-name: ci
+name: publish
 
 on:
-  pull_request:
+  push:
     branches:
       - master
 
 jobs:
-  ci:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - name: Setup Node.js for use with actions
         uses: actions/setup-node@v1
         with:
-          version: 12.18
+          node-version: 12.18
       - name: Setup dependency cache
         uses: actions/cache@v2
         with:
@@ -35,3 +38,10 @@ jobs:
         uses: codecov/codecov-action@v1
         with:
           file: ./coverage/lcov.info
+      - name: Build
+        run: npm run build
+      - name: Release
+        run: npm run release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
