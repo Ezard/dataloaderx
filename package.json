@@ -1,7 +1,7 @@
 {
   "name": "dataloaderx",
   "version": "0.1.0",
-  "description": "",
+  "description": "DataLoaderX is an expansion upon DataLoader, designed to abstract some details away, and add common functionality",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "scripts": {
