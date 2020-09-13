@@ -39,7 +39,7 @@ describe('ArrayDataLoader', () => {
     const results = await arrayDataLoader.getDataLoader({}).load(userId);
     const ids = results.map(result => result.userId);
 
-    for (let id of ids) {
+    for (const id of ids) {
       expect(id).toEqual(userId);
     }
   });
