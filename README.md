@@ -26,7 +26,7 @@ await idLoader.getDataLoader(context).load(1); // returns the user with an ID of
 ## ArrayDataLoader
 
 ```typescript
-const authorIdLoader = new ObjectDataLoader(
+const authorIdLoader = new ArrayDataLoader(
   async (ids: number[]) => getBooksByAuthorIds(ids),
   result => result.authorId
 );
