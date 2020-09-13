@@ -1,12 +1,12 @@
-name: ci
+name: publish
 
 on:
-  pull_request:
+  push:
     branches:
       - master
 
 jobs:
-  ci:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -35,3 +35,9 @@ jobs:
         uses: codecov/codecov-action@v1
         with:
           file: ./coverage/lcov.info
+      - name: Build
+        run: npm run build
+      - name: Release
+        run: npm run release
+        with:
+          GITHUB_TOKEN: {{ secrets.GITHUB_TOKEN }}
