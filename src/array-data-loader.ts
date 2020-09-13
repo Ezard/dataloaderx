@@ -1,10 +1,10 @@
 import { BaseDataLoader, DataLoaderOptions } from './base-data-loader';
 
-export class ArrayDataLoader<Entity, ID> extends BaseDataLoader<Entity[], ID, Entity[]> {
+export class ArrayDataLoader<Entity, ID, HookResult> extends BaseDataLoader<Entity[], ID, Entity[], HookResult> {
   constructor(
     protected loadByIds: (ids: ID[]) => Promise<Entity[]>,
     protected getId: (result: Entity) => ID,
-    options?: DataLoaderOptions,
+    options?: DataLoaderOptions<HookResult>,
   ) {
     super(options);
   }
