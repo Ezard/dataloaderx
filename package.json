@@ -13,7 +13,11 @@
     "test:watch": "jest --watch"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Ben Ezard",
+    "email": "ben@ezard.io",
+    "url": "ezard.io"
+  },
   "license": "ISC",
   "dependencies": {
     "dataloader": "^2.0.0"
