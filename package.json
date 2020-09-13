@@ -8,6 +8,7 @@
     "build:watch": "tsc --watch",
     "lint:code": "eslint src",
     "lint:style": "prettier --check src",
+    "release": "semantic-release",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch"
