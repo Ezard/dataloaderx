@@ -2,7 +2,8 @@
   "name": "dataloaderx",
   "version": "0.1.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm",
     "build:cjs": "tsc --project tsconfig.build-cjs.json",
