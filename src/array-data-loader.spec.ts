@@ -6,7 +6,6 @@ interface Entity {
 }
 
 describe('ArrayDataLoader', () => {
-  let arrayDataLoader: ArrayDataLoader<Entity, number>;
   const entities: Entity[] = [
     {
       id: 0,
@@ -30,18 +29,15 @@ describe('ArrayDataLoader', () => {
     },
   ];
 
-  beforeEach(() => {
-    arrayDataLoader = new ArrayDataLoader<Entity, number>(
+  it('should return the relevant entities if they were loaded', async () => {
+    const arrayDataLoader = new ArrayDataLoader<Entity, number>(
       async () => entities,
       result => result.userId,
     );
-  });
-
-  it('should return the relevant entities if they were loaded', async () => {
     const userId = 1;
 
-    const entities = await arrayDataLoader.getDataLoader({}).load(userId);
-    const ids = entities.map(entity => entity.userId);
+    const results = await arrayDataLoader.getDataLoader({}).load(userId);
+    const ids = results.map(result => result.userId);
 
     for (let id of ids) {
       expect(id).toEqual(userId);
@@ -49,11 +45,15 @@ describe('ArrayDataLoader', () => {
   });
 
   it('should return an empty array if no relevant entities were loaded', async () => {
+    const arrayDataLoader = new ArrayDataLoader<Entity, number>(
+      async () => entities,
+      result => result.userId,
+    );
     const userId = 3;
 
-    const entities = await arrayDataLoader.getDataLoader({}).load(userId);
+    const results = await arrayDataLoader.getDataLoader({}).load(userId);
 
-    expect(entities.length).toEqual(0);
+    expect(results.length).toEqual(0);
   });
 
   it('should handle entities being returned in a different order to that in which the IDs were supplied', async () => {
