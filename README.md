@@ -1,5 +1,6 @@
 # DataLoaderX
 
+![npm](https://img.shields.io/npm/v/dataloaderx?logo=npm)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ezard/dataloaderx/publish?logo=github)
 ![Codecov](https://img.shields.io/codecov/c/github/ezard/dataloaderx?logo=codecov)
 ![David](https://img.shields.io/david/ezard/dataloaderx?logo=npm)
