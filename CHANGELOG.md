@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/Ezard/dataloaderx/compare/v1.0.1...v1.0.2) (2020-09-20)
+
+
+### Bug Fixes
+
+* **docs:** Add missing examples and metadata ([#24](https://github.com/Ezard/dataloaderx/issues/24)) ([a193777](https://github.com/Ezard/dataloaderx/commit/a1937776c250bf026456c377ada888d96652c1fa))
+
 ## [1.0.1](https://github.com/Ezard/dataloaderx/compare/v1.0.0...v1.0.1) (2020-09-13)
 
 
