@@ -4,7 +4,8 @@
   "reporters": [
     "html",
     "clear-text",
-    "progress"
+    "progress",
+    "dashboard"
   ],
   "testRunner": "jest",
   "coverageAnalysis": "perTest",
