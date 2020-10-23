@@ -6,6 +6,29 @@ interface Entity {
 }
 
 describe('BaseDataLoader', () => {
+  it('should assign each instance a unique ID on creation', () => {
+    const objectDataLoader1 = new ObjectDataLoader(
+      async () => [],
+      () => undefined,
+    );
+    const objectDataLoader2 = new ObjectDataLoader(
+      async () => [],
+      () => undefined,
+    );
+    const objectDataLoader3 = new ObjectDataLoader(
+      async () => [],
+      () => undefined,
+    );
+    const context: DataLoaderContext = {};
+
+    const dataLoader1 = objectDataLoader1.getDataLoader(context);
+    const dataLoader2 = objectDataLoader2.getDataLoader(context);
+    const dataLoader3 = objectDataLoader3.getDataLoader(context);
+
+    expect(context.dataLoaders?.['0']).toBe(dataLoader1);
+    expect(context.dataLoaders?.['1']).toBe(dataLoader2);
+    expect(context.dataLoaders?.['2']).toBe(dataLoader3);
+  });
   it('should cache data loaders using the provided context', () => {
     const context: DataLoaderContext = {};
     const objectDataLoader = new ObjectDataLoader<Entity, number>(
