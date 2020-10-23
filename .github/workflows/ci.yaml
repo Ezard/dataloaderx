@@ -30,7 +30,7 @@ jobs:
       - name: Lint styling
         run: npm run lint:style
       - name: Run tests
-        run: npm run test:coverage
+        run: npm run test:unit:coverage
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:

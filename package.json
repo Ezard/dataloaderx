@@ -12,10 +12,10 @@
     "lint:code": "eslint src",
     "lint:style": "prettier --check src",
     "release": "semantic-release",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch",
-    "stryker": "stryker run"
+    "test:unit": "jest",
+    "test:unit:coverage": "jest --coverage",
+    "test:unit:watch": "jest --watch",
+    "test:mutation": "stryker run"
   },
   "keywords": [
     "dataloader",
