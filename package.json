@@ -12,9 +12,10 @@
     "lint:code": "eslint src",
     "lint:style": "prettier --check src",
     "release": "semantic-release",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:unit": "jest",
+    "test:unit:coverage": "jest --coverage",
+    "test:unit:watch": "jest --watch",
+    "test:mutation": "stryker run"
   },
   "keywords": [
     "dataloader",
@@ -43,6 +44,9 @@
     "@semantic-release/git": "9.0.0",
     "@semantic-release/github": "7.1.1",
     "@semantic-release/npm": "7.0.6",
+    "@stryker-mutator/core": "4.0.0",
+    "@stryker-mutator/jest-runner": "4.0.0",
+    "@stryker-mutator/typescript-checker": "4.0.0",
     "@types/jest": "26.0.15",
     "@typescript-eslint/eslint-plugin": "4.5.0",
     "@typescript-eslint/parser": "4.5.0",

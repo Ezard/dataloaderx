@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js for use with actions
         uses: actions/setup-node@v1
         with:
-          node-version: 12.18
+          node-version: 14.14
       - name: Setup dependency cache
         uses: actions/cache@v2
         with:
@@ -32,8 +32,12 @@ jobs:
         run: npm run lint:code
       - name: Lint styling
         run: npm run lint:style
-      - name: Run tests
-        run: npm run test:coverage
+      - name: Run unit tests
+        run: npm run test:unit:coverage
+      - name: Run mutation tests
+        run: npm run test:mutation -- --reporters=clear-text,dashboard
+        env:
+          STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
