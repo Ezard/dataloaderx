@@ -35,7 +35,7 @@ jobs:
       - name: Run unit tests
         run: npm run test:unit:coverage
       - name: Run mutation tests
-        run: npm run test:mutation
+        run: npm run test:mutation -- --reporters=clear-text,dashboard
         env:
           STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
       - name: Upload coverage to Codecov
