@@ -13,5 +13,8 @@
   "tsconfigFile": "tsconfig.json",
   "checkers": [
     "typescript"
-  ]
+  ],
+  "thresholds": {
+    "break": 100
+  }
 }
