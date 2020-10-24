@@ -1,8 +1,11 @@
 # DataLoaderX
 
 [![npm](https://img.shields.io/npm/v/dataloaderx?logo=npm)](https://www.npmjs.com/package/dataloaderx)
+
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ezard/dataloaderx/publish?logo=github)](https://github.com/Ezard/dataloaderx)
 [![Codecov](https://img.shields.io/codecov/c/github/ezard/dataloaderx?logo=codecov)](https://codecov.io/gh/Ezard/dataloaderx)
+[![Stryker](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FEzard%2Fdataloaderx%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/Ezard/dataloaderx/master)
+
 [![David](https://img.shields.io/david/ezard/dataloaderx?logo=npm)](https://github.com/Ezard/dataloaderx/blob/master/package.json)
 [![David](https://img.shields.io/david/dev/ezard/dataloaderx?logo=npm)](https://github.com/Ezard/dataloaderx/blob/master/package.json)
 
