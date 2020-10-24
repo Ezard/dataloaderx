@@ -193,4 +193,4 @@ fabric.properties
 reports
 
 # stryker temp files
-.stryker-tmp
+stryker-tmp
