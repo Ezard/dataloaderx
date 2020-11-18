@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Ezard/dataloaderx/compare/v1.1.0...v1.2.0) (2020-11-18)
+
+
+### Features
+
+* Mark package as side-effect-free ([#72](https://github.com/Ezard/dataloaderx/issues/72)) ([767b705](https://github.com/Ezard/dataloaderx/commit/767b70562c486022c1bdf31697644f1ed6ed3b12))
+
 # [1.1.0](https://github.com/Ezard/dataloaderx/compare/v1.0.2...v1.1.0) (2020-11-18)
 
 
