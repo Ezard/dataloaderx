@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Ezard/dataloaderx/compare/v1.0.2...v1.1.0) (2020-11-18)
+
+
+### Features
+
+* Improve package metadata ([#71](https://github.com/Ezard/dataloaderx/issues/71)) ([c9fe740](https://github.com/Ezard/dataloaderx/commit/c9fe74094827c9b66bae2155d463b17c6467071d))
+
 ## [1.0.2](https://github.com/Ezard/dataloaderx/compare/v1.0.1...v1.0.2) (2020-09-20)
 
 
