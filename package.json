@@ -10,6 +10,7 @@
     "default": "dist/esm/index.js"
   },
   "types": "dist/esm/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm",
     "build:cjs": "tsc --project tsconfig.build-cjs.json",
