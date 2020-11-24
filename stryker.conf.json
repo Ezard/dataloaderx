@@ -3,6 +3,9 @@
   "packageManager": "npm",
   "tempDirName": "stryker-tmp",
   "testRunner": "jest",
+  "jest": {
+    "configFile": "jest.config.json"
+  },
   "coverageAnalysis": "perTest",
   "tsconfigFile": "tsconfig.json",
   "checkers": [
