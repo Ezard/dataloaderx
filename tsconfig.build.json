@@ -2,7 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "declarationDir": "./dist/types",
-    "sourceMap": false
+    "sourceMap": false,
+    "incremental": false
   },
   "exclude": [
     "node_modules",
