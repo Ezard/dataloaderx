@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Ezard/dataloaderx/compare/v1.2.0...v1.2.1) (2021-01-18)
+
+
+### Bug Fixes
+
+* Fix export paths ([#108](https://github.com/Ezard/dataloaderx/issues/108)) ([67ca497](https://github.com/Ezard/dataloaderx/commit/67ca497cd140bdea92b70b5c47fb57f048ddfb02))
+
 # [1.2.0](https://github.com/Ezard/dataloaderx/compare/v1.1.0...v1.2.0) (2020-11-18)
 
 
