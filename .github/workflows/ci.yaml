@@ -43,6 +43,6 @@ jobs:
       - name: Run mutation tests
         run: npm run test:mutation -- --reporters=clear-text
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v5
         with:
           file: ./coverage/lcov.info
