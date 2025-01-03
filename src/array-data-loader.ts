@@ -1,8 +1,8 @@
 import { BaseDataLoader, DataLoaderOptions } from './base-data-loader';
 
-export class ArrayDataLoader<Entity, ID, HookResult = unknown> extends BaseDataLoader<
-  Entity[],
+export class ArrayDataLoader<ID, Entity, HookResult = unknown> extends BaseDataLoader<
   ID,
+  Entity[],
   Entity[],
   HookResult
 > {

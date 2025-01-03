@@ -10,7 +10,7 @@ export interface DataLoaderOptions<T> {
   hooks?: DataLoaderHookOptions<T>;
 }
 
-export abstract class BaseDataLoader<Entity, ID, Result, HookResult = unknown> {
+export abstract class BaseDataLoader<ID, Entity, Result, HookResult = unknown> {
   private static ID_COUNT = 0;
   private readonly id: number;
 

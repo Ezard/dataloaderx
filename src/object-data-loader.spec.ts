@@ -18,7 +18,7 @@ describe('ObjectDataLoader', () => {
   ];
 
   it('should return the relevant entity if it was loaded', async () => {
-    const objectDataLoader = new ObjectDataLoader<Entity, number>(
+    const objectDataLoader = new ObjectDataLoader<number, Entity>(
       async () => entities,
       result => result.id,
     );
@@ -30,7 +30,7 @@ describe('ObjectDataLoader', () => {
   });
 
   it('should return null if the relevant entity was not loaded', async () => {
-    const objectDataLoader = new ObjectDataLoader<Entity, number>(
+    const objectDataLoader = new ObjectDataLoader<number, Entity>(
       async () => entities,
       result => result.id,
     );
