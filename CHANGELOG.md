@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/Ezard/dataloaderx/compare/v1.2.2...v2.0.0) (2025-01-03)
+
+
+### Features
+
+* standardise ordering of generics ([#628](https://github.com/Ezard/dataloaderx/issues/628)) ([e208e3c](https://github.com/Ezard/dataloaderx/commit/e208e3c84f81660a8ec22d3ae832a4376d4c81b8))
+
+
+### BREAKING CHANGES
+
+* the order of some generics have been changed
+
 ## [1.2.2](https://github.com/Ezard/dataloaderx/compare/v1.2.1...v1.2.2) (2025-01-03)
 
 
