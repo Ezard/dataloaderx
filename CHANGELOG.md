@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/Ezard/dataloaderx/compare/v2.0.0...v2.1.0) (2025-01-03)
+
+
+### Features
+
+* stringify IDs before use as cache keys ([#629](https://github.com/Ezard/dataloaderx/issues/629)) ([bd6b70b](https://github.com/Ezard/dataloaderx/commit/bd6b70bf12515c11326323937603bc8d189a89d4))
+
 # [2.0.0](https://github.com/Ezard/dataloaderx/compare/v1.2.2...v2.0.0) (2025-01-03)
 
 
