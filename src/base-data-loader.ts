@@ -24,17 +24,22 @@ export abstract class BaseDataLoader<ID, Entity, Result, HookResult = unknown> {
   protected abstract load(ids: ReadonlyArray<ID>): Promise<(Entity | Error)[]>;
 
   private createDataLoader(): DataLoader<ID, Entity> {
-    return new DataLoader<ID, Entity>(async (ids: ReadonlyArray<ID>) => {
-      let results: (Entity | Error)[];
-      if (this.options.hooks) {
-        const beforeHookResult = await this.options.hooks.beforeLoad();
-        results = await this.load(ids);
-        await this.options.hooks.afterLoad?.(beforeHookResult);
-      } else {
-        results = await this.load(ids);
-      }
-      return results;
-    });
+    return new DataLoader<ID, Entity, string>(
+      async (ids: ReadonlyArray<ID>) => {
+        let results: (Entity | Error)[];
+        if (this.options.hooks) {
+          const beforeHookResult = await this.options.hooks.beforeLoad();
+          results = await this.load(ids);
+          await this.options.hooks.afterLoad?.(beforeHookResult);
+        } else {
+          results = await this.load(ids);
+        }
+        return results;
+      },
+      {
+        cacheKeyFn: key => JSON.stringify(key),
+      },
+    );
   }
 
   getDataLoader(context: DataLoaderContext): DataLoader<ID, Entity> {

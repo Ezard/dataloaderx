@@ -99,4 +99,15 @@ describe('BaseDataLoader', () => {
 
     expect(afterLoad).toHaveBeenCalledWith(beforeLoadResult);
   });
+
+  it('should return a cached entities when using complex IDs', async () => {
+    const load = jest.fn().mockReturnValue([]);
+    const objectDataLoader = new ObjectDataLoader<{ foo: number }, Entity>(load, result => ({ foo: result.id }));
+    const dataLoader = objectDataLoader.getDataLoader({});
+
+    await dataLoader.load({ foo: 123 });
+    await dataLoader.load({ foo: 123 });
+
+    expect(load).toHaveBeenCalledTimes(1);
+  });
 });
