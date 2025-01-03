@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/Ezard/dataloaderx/compare/v1.2.1...v1.2.2) (2025-01-03)
+
+
+### Bug Fixes
+
+* **ci:** update Codecov action input field name from 'file' to 'files' ([#621](https://github.com/Ezard/dataloaderx/issues/621)) ([8c7e321](https://github.com/Ezard/dataloaderx/commit/8c7e3210b16cf7d92002368a700648795912afe7))
+
 ## [1.2.1](https://github.com/Ezard/dataloaderx/compare/v1.2.0...v1.2.1) (2021-01-18)
 
 
