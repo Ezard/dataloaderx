@@ -30,7 +30,7 @@ describe('ArrayDataLoader', () => {
   ];
 
   it('should return the relevant entities if they were loaded', async () => {
-    const arrayDataLoader = new ArrayDataLoader<Entity, number>(
+    const arrayDataLoader = new ArrayDataLoader<number, Entity>(
       async () => entities,
       result => result.userId,
     );
@@ -45,7 +45,7 @@ describe('ArrayDataLoader', () => {
   });
 
   it('should return an empty array if no relevant entities were loaded', async () => {
-    const arrayDataLoader = new ArrayDataLoader<Entity, number>(
+    const arrayDataLoader = new ArrayDataLoader<number, Entity>(
       async () => entities,
       result => result.userId,
     );

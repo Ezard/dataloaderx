@@ -31,7 +31,7 @@ describe('BaseDataLoader', () => {
   });
   it('should cache data loaders using the provided context', () => {
     const context: DataLoaderContext = {};
-    const objectDataLoader = new ObjectDataLoader<Entity, number>(
+    const objectDataLoader = new ObjectDataLoader<number, Entity>(
       async () => [],
       result => result.id,
     );
@@ -44,7 +44,7 @@ describe('BaseDataLoader', () => {
 
   it('should run the pre-load hook', async () => {
     const beforeLoad = jest.fn();
-    const objectDataLoader = new ObjectDataLoader<Entity, number>(
+    const objectDataLoader = new ObjectDataLoader<number, Entity>(
       async () => [],
       result => result.id,
       {
@@ -61,7 +61,7 @@ describe('BaseDataLoader', () => {
 
   it('should run the post-load hook', async () => {
     const afterLoad = jest.fn();
-    const objectDataLoader = new ObjectDataLoader<Entity, number>(
+    const objectDataLoader = new ObjectDataLoader<number, Entity>(
       async () => [],
       result => result.id,
       {
@@ -84,7 +84,7 @@ describe('BaseDataLoader', () => {
       foo: 'bar',
     };
     const afterLoad = jest.fn();
-    const objectDataLoader = new ObjectDataLoader<Entity, number>(
+    const objectDataLoader = new ObjectDataLoader<number, Entity>(
       async () => [],
       result => result.id,
       {
