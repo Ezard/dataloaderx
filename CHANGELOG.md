@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/Ezard/dataloaderx/compare/v2.1.0...v2.1.1) (2025-01-03)
+
+
+### Bug Fixes
+
+* **docs:** update broken README badges ([#632](https://github.com/Ezard/dataloaderx/issues/632)) ([2b7ce3f](https://github.com/Ezard/dataloaderx/commit/2b7ce3f69bee39e1e322ec9ea7a8fd4675e63ae9))
+
 # [2.1.0](https://github.com/Ezard/dataloaderx/compare/v2.0.0...v2.1.0) (2025-01-03)
 
 
