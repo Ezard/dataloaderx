@@ -19,6 +19,9 @@ This library provides 2 classes to work with: `ObjectDataLoader` and `ArrayDataL
 Both classes require a `context` to be passed to them, which is any object which will persist for the duration of the request that is currently being processed.
 This allows dataloader instances to be cached for the duration of the request, [as recommended](https://github.com/graphql/dataloader#caching-per-request) by the base dataloader library.
 
+The ID can be a scalar (e.g. a `string` or `number`), or can be an object or array;
+the ID will always be stringified before being used a cache key so, for example, 2 objects that contain the same data will cause a cached entity to be returned (if one exists).
+
 ### ObjectDataLoader
 
 ```typescript
